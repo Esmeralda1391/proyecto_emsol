@@ -34,13 +34,21 @@ class LoginController extends BaseController
 
                 $session->set($info);
 
-
                 // Aqui va el codigo que redirecciona al inicio del sistema
+                return view('Inicio/Inicio');
+
             } else {
                 return redirect('Login');
             }
         } else {
             return view('Login/Login');
         }
+    }
+
+
+    public function cerrar(){
+        $session = session();
+        $session->destroy();
+        return redirect('Login');
     }
 }
