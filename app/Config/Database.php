@@ -27,7 +27,7 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => 'esmeralda',
+        'username'     => 'root',
         'password'     => '13122002',
         'database'     => 'emsol',
         'DBDriver'     => 'MySQLi',
