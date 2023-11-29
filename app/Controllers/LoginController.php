@@ -18,6 +18,7 @@ class LoginController extends BaseController
 
             $correo = $_POST['email'];
             $contra = $_POST['password'];
+
             // echo "Mi correo es {$correo}, mi contraseña es {$contra}<br>";
 
             $usuario = $db->query("CALL EM_BUSCAR_USUARIO(?, ?);", array($correo, $contra))->getResultArray();
@@ -35,7 +36,8 @@ class LoginController extends BaseController
                 $session->set($info);
 
                 // Aqui va el codigo que redirecciona al inicio del sistema
-                return view('Inicio/Inicio');
+
+                return redirect('Inicio');
 
             } else {
                 return redirect('Login');

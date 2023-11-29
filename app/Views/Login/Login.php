@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio sesión</title>
+    <link rel="shortcut icon" href="<?= base_url('iconos/icon.svg') ?>" type="image/svg=xml">
 </head>
 
 <body>
