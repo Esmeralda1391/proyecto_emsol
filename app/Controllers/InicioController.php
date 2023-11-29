@@ -10,9 +10,13 @@ class InicioController extends BaseController
     {
         $session = session();
         if ($session->get('logged_in')) {
-            return view('Inicio/Inicio');  
-        }else {
-            
+
+            $data = [
+                'titulo' => 'Inicio',
+            ];
+
+            return view('Inicio/Inicio', $data);
+        } else {
             return redirect('Login');
         }
     }

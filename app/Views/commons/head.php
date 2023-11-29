@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emsol</title>
+    <title>Emsol - <?php echo $titulo ?> </title>
     <link rel="shortcut icon" href="<?= base_url('iconos/icon.svg') ?>" type="image/svg=xml">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
@@ -61,17 +61,34 @@
         }
 
         .barra {
-            background-color: black;
             margin-bottom: 1rem;
+            display: block;
+        }
+
+        .titulo_page {
+            width: 100vw;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .nav {
+            width: 90%;
+            margin: 0 auto;
+            display: block;
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary barra">
+    <nav class="navbar navbar-expand-lg  bg-body-tertiary barra">
+        <div class="">
+            <h2 class="titulo_page"><?php echo $titulo ?></h2>
+        </div>
         <!-- Container wrapper -->
-        <div class="container-fluid">
+        <div class="container-fluid nav">
             <!-- Toggle button -->
             <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
