@@ -102,7 +102,7 @@
                         <a class="nav-link titulo" href="<?= base_url('Inicio') ?>">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link titulo" href="#">Propiedades</a>
+                        <a class="nav-link titulo" href="<?= base_url('Propiedades') ?>">Propiedades</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link titulo" href="#">Reportes</a>
