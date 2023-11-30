@@ -1,3 +1,6 @@
+    <!-- Se puede mostrar la seccion en donde se estaran editando los datos que ya teniamos en nuestra vista principal
+    de propiedad -->
+
 <?= view('commons/head') ?>
 
 <div class="col-10 mx-auto">

@@ -1,3 +1,6 @@
+    <!--Aqui podemos visializar los datos correspondientes que se estaranmostrando en un formulario
+  este tendra la funcion de mostrar aquellos nuevos datos agregados -->
+
 <?= view('commons/head') ?>
 
 <div class="col-10 mx-auto">

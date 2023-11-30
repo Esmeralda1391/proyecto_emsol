@@ -1,3 +1,6 @@
+    <!-- Aqui podemos visualizar de que se genraron modulos y se les asigna un base base_url para poder 
+acceder al modulo correspondiente -->
+
 <?= view('commons/head') ?>
 
 <div class="container col-10 mx-auto">
@@ -9,7 +12,7 @@
     </a>
 
     <!-- Reportes -->
-    <a class="btn btn-primary btn-square-social" style="background-color: #55acee;" href="#!" role="button">
+    <a class="btn btn-primary btn-square-social" style="background-color: #55acee;" href="<?= base_url('Reportes') ?>" role="button">
         <img class="btn-img" src="<?= base_url('iconos/grafico.svg') ?>" alt="icono de reporte">
         <p>Reportes</p>
     </a>

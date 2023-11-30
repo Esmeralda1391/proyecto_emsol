@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 
 class InicioController extends BaseController
 {
+    // Se realizo un InicioController para poder acceder a iniciar una sesión
     public function index()
     {
         $session = session();

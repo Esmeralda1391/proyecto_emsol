@@ -7,6 +7,10 @@ use App\Models\PropiedadModel;
 
 class PropiedadesController extends BaseController
 {
+
+    /**Se realizo un controllador de Propiedades en donde se podra tener una redireccion a ciertos modulos 
+     * como lo es el inicio
+    */
     public function index()
     {
 
@@ -29,6 +33,7 @@ class PropiedadesController extends BaseController
         }
     }
 
+    /** Se genera una funcion para poder agregar propiedades y estas se muestren en una vista */
     public function agregar()
     {
 
@@ -48,11 +53,11 @@ class PropiedadesController extends BaseController
 
     public function add()
     {
-
+        
         $session = session();
         if ($session->get('logged_in')) {
-
-
+            
+            
             $data = [
                 'title_property' => $_POST['title_property'],
                 'state' => $_POST['state'],
@@ -64,16 +69,19 @@ class PropiedadesController extends BaseController
                 'owner_name' => $_POST['owner_name'],
                 'phone' => $_POST['phone'],
             ];
-
+            
             $propiedadModel = new PropiedadModel();
-
+            
             $propiedadModel->insert($data);
-
+            
             return redirect('Propiedades');
         } else {
             return redirect('Login');
         }
     }
+    
+    /** Esta funcion cumple con la edicion de nuestros datos que se pueden mostrar,
+     *  asignando los valores correspondientes */
 
     public function editar($id)
     {
@@ -125,6 +133,9 @@ class PropiedadesController extends BaseController
         }
     }
 
+    /**Esta funcion genera la eliminacion de los datos que se muestran en la 
+     * seccion de propiedades
+    */
     public function eliminar($id)
     {
         $session = session();

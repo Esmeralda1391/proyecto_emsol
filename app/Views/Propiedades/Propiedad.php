@@ -1,70 +1,75 @@
-<?= view('commons/head') ?>
+        <!-- Se genero una tabla que representara las informacion de la vista con
+            los datos correspondientes a cada campo -->
 
-<div class="container col-10 mx-auto">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Titulo Propiedad</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Municipio</th>
-                <th scope="col">Ciudad</th>
-                <th scope="col">Tipo Propiedad</th>
-                <th scope="col">Medidas m<sup>2</sup></th>
-                <th scope="col">Costo</th>
-                <th scope="col">Dueño Propiedad</th>
-                <th scope="col">Teléfono</th>
-                <th scope="col">Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
+        <?= view('commons/head') ?>
 
-            <?php foreach ($propiedades as $propiedad) : ?>
+        <div class="container col-10 mx-auto">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo Propiedad</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Municipio</th>
+                        <th scope="col">Ciudad</th>
+                        <th scope="col">Tipo Propiedad</th>
+                        <th scope="col">Medidas m<sup>2</sup></th>
+                        <th scope="col">Costo</th>
+                        <th scope="col">Dueño Propiedad</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                <tr>
-                    <td>
-                        <?php echo $propiedad['id']; ?>
-                    </td>
-                    <td>
-                        <?php echo $propiedad['title_property']; ?>
-                    </td>
-                    <td>
-                        <?php echo $propiedad['state']; ?>
-                    </td>
-                    <td>
-                        <?php echo $propiedad['town']; ?>
-                    </td>
-                    <td>
-                        <?php echo $propiedad['municipality']; ?>
-                    </td>
-                    <td>
-                        <?php echo $propiedad['kind_property']; ?>
-                    </td>
-                    <td>
-                        <?php echo $propiedad['measures']; ?>
-                    </td>
-                    <td>
-                        <?php echo $propiedad['cost']; ?>
-                    </td>
-                    <td>
-                        <?php echo $propiedad['owner_name']; ?>
-                    </td>
-                    <td>
-                        <?php echo $propiedad['phone']; ?>
-                    </td>
-                    <td>
+                    <?php foreach ($propiedades as $propiedad) : ?>
 
-                        <a href="<?= base_url('Propiedades/editar/' . $propiedad['id'])  ?>" class="btn btn-primary" style="margin: auto; display:block;">Editar</a>
-                        <br>
-                        <a href="<?= base_url('Propiedades/eliminar/' . $propiedad['id'])  ?>" class="btn btn-warning" style="margin: auto; display:block;">Eliminar</a>
+                        <tr>
+                            <td>
+                                <?php echo $propiedad['id']; ?>
+                            </td>
+                            <td>
+                                <?php echo $propiedad['title_property']; ?>
+                            </td>
+                            <td>
+                                <?php echo $propiedad['state']; ?>
+                            </td>
+                            <td>
+                                <?php echo $propiedad['town']; ?>
+                            </td>
+                            <td>
+                                <?php echo $propiedad['municipality']; ?>
+                            </td>
+                            <td>
+                                <?php echo $propiedad['kind_property']; ?>
+                            </td>
+                            <td>
+                                <?php echo $propiedad['measures']; ?>
+                            </td>
+                            <td>
+                                <?php echo $propiedad['cost']; ?>
+                            </td>
+                            <td>
+                                <?php echo $propiedad['owner_name']; ?>
+                            </td>
+                            <td>
+                                <?php echo $propiedad['phone']; ?>
+                            </td>
+                            <td>
 
-                    </td>
-                </tr>
+                                <!-- Se asignan las rutas correspondientes para poder acceder sin ningun problema -->
 
-            <?php endforeach; ?>
+                                <a href="<?= base_url('Propiedades/editar/' . $propiedad['id'])  ?>" class="btn btn-primary" style="margin: auto; display:block;">Editar</a>
+                                <br>
+                                <a href="<?= base_url('Propiedades/eliminar/' . $propiedad['id'])  ?>" class="btn btn-warning" style="margin: auto; display:block;">Eliminar</a>
 
-        </tbody>
-    </table>
-</div>
+                            </td>
+                        </tr>
 
-<?= view('commons/footer') ?>
+                    <?php endforeach; ?>
+
+                </tbody>
+            </table>
+        </div>
+
+        <?= view('commons/footer') ?>
