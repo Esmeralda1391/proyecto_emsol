@@ -4,6 +4,10 @@
         <?= view('commons/head') ?>
 
         <div class="container col-10 mx-auto">
+        <a href="<?= base_url('Propiedades/agregar') ?>" class="btn btn-success">Agregar</a>
+        </div>
+        <br>
+        <div class="container col-10 mx-auto">
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
