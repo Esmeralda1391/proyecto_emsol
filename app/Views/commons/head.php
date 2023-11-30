@@ -105,10 +105,10 @@
                         <a class="nav-link titulo" href="<?= base_url('Propiedades') ?>">Propiedades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link titulo" href="#">Reportes</a>
+                        <a class="nav-link titulo" href="<?= base_url('Reportes') ?>">Reportes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link titulo" href="#">Ventas</a>
+                        <a class="nav-link titulo" href="<?= base_url('Ventas') ?>">Ventas</a>
                     </li>
                 </ul>
                 <!-- Left links -->
