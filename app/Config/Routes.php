@@ -28,3 +28,7 @@ $routes->get('Propiedades/eliminar/(:num)', 'PropiedadesController::eliminar/$1'
 
 //Reportes
 $routes->get('Reportes', 'ReportesController::index');
+
+//Ventas
+$routes->get('Ventas', 'VentasController::index');
+
