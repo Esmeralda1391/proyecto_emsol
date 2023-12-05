@@ -12,7 +12,7 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Titulo Propiedad</th>
+                        <th scope="col">Propiedad</th>
                         <th scope="col">Estado</th>
                         <th scope="col">Municipio</th>
                         <th scope="col">Ciudad</th>
